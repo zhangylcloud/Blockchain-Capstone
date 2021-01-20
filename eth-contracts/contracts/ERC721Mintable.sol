@@ -11,7 +11,7 @@ contract Ownable {
     //  1) create a private '_owner' variable of type address with a public getter function
     address private _owner;
 
-    function getOwner() public returns(address)
+    function getOwner() public view returns(address)
     {
         return _owner;
     }
@@ -552,7 +552,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 //      - make the base token uri: https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/
 //  2) create a public mint() that does the following:
 //      -can only be executed by the contract owner
-//      -takes in a 'to' address, tokenId, and tokenURI as parameters
+//      -takes in a 'to' address, tokenId, and tokenURI as parameters (token URI is hard coded)
 //      -returns a true boolean upon completion of the function
 //      -calls the superclass mint and setTokenURI functions
 
@@ -562,7 +562,7 @@ contract CustomERC721Token is ERC721Metadata
     ERC721Metadata(name, symbol, "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/") 
     public {}
 
-    function mint(address to, uint tokenId, string memory tokenURI) public onlyOwner returns(bool)
+    function mint(address to, uint tokenId) public onlyOwner returns(bool)
     {
         _mint(to, tokenId);
         setTokenURI(tokenId);
