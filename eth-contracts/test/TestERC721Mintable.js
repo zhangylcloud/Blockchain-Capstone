@@ -2,18 +2,6 @@ var CustomERC721Token = artifacts.require('CustomERC721Token');
 var util = require('util');
 
 contract('TestERC721Mintable', accounts => {
-
-    //const account0 = accounts[0];
-    //const account1 = accounts[1];
-    //const account2 = accounts[2];
-    //const account3 = accounts[3];
-    //const account4 = accounts[4];
-    //const account5 = accounts[5];
-    //const account6 = accounts[6];
-    //const account7 = accounts[7];
-    //const account8 = accounts[8];
-    //const account9 = accounts[9];
-
     describe('match erc721 spec', function () {
         beforeEach(async function () { 
             this.contract = await CustomERC721Token.new("Test Name", "TESTSYM", {from: accounts[0]}); //accounts[0] is contract owner
