@@ -6,8 +6,15 @@
 //  deployer.deploy(SquareVerifier);
 //  deployer.deploy(SolnSquareVerifier);
 //};
-var CustomERC721Token = artifacts.require("CustomERC721Token");
+//var CustomERC721Token = artifacts.require("CustomERC721Token");
+//
+//module.exports = function(deployer) {
+//  deployer.deploy(CustomERC721Token, "Test Name", "TESTSYM");
+//};
+var Verifier = artifacts.require("Verifier");
+var SolnSquareVerifier = artifacts.require("SolnSquareVerifier");
 
 module.exports = function(deployer) {
-  deployer.deploy(CustomERC721Token, "Test Name", "TESTSYM");
+  deployer.deploy(Verifier);
+  deployer.deploy(SolnSquareVerifier, "Test Name", "TESTSYM");
 };
