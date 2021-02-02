@@ -15,7 +15,6 @@ contract("Test SolnSquareVerifier", (accounts) =>{
             let c = proof.proof.c;
             let inputs = proof.inputs;
             let result = await contractInstance.addSolution(a, b, c, inputs, {from: accounts[1]});
-            //console.log(result);
             assert.equal(result.logs[1].event, "SolutionAdded", "SolutionAdded event not emitted");
         });
 
