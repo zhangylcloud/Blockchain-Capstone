@@ -10,11 +10,11 @@ The capstone will build upon the knowledge you have gained in the course in orde
 5. ```truffle test```, we should see truffle tests pass for ERC721Mintable, Verifier and SolnSquareVerifier contract.
 
 
-## Contract address on Rinkeby on Etherscan
-https://rinkeby.etherscan.io/address/0x10Ed6f57B7Bcf3A0f8884b53369F672451Ba96fC
+## Contract address on Rinkeby
+0x10Ed6f57B7Bcf3A0f8884b53369F672451Ba96fC
 
-## Opensea address
-https://testnets.opensea.io/assets/0x10ed6f57b7bcf3a0f8884b53369f672451ba96fc/1
+## Opensea storefront 
+https://testnets.opensea.io/assets/unidentified-contract-ty9jt8k4p2
 
 ## Contract ABI
 ```
